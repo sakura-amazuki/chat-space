@@ -27,16 +27,15 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|id|integer|null: false, foreign_key: true|
 |name|string|null: false, foreign_key: true|
 |mail|string|null: false, funique: true|
 |password|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
 
-## gloopテーブル
+
+## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -45,10 +44,9 @@ Things you may want to cover:
 |user_id|string|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
 - belongs_to :user
 
-## userテーブル
+## chatテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -56,7 +54,6 @@ Things you may want to cover:
 |gloop_id|string|null: false, foreign_key: true|
 |text|string|null: false, foreign_key: true|
 |time|string|null: false, foreign_key: true|
-|good_count|string|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
