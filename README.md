@@ -27,10 +27,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: true|
-|name|string|null: false, foreign_key: true|
-|mail|string|null: false, funique: true|
-|password|string|null: false, foreign_key: true|
+|id|integer|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
+|mail|string|null: false, funique: false|
+|password|string|null: false, foreign_key: false|
 
 ### Association
 
@@ -39,8 +39,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|gloop_id|integer|null: false, foreign_key: true|
-|gloop_name|string|null: false, foreign_key: true|
+|gloop_id|integer|null: false, foreign_key: false|
+|gloop_name|string|null: false, foreign_key: false|
 |user_id|string|null: false, foreign_key: true|
 
 ### Association
@@ -52,8 +52,8 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |gloop_id|string|null: false, foreign_key: true|
-|text|string|null: false, foreign_key: true|
-|time|string|null: false, foreign_key: true|
+|text|string|null: false, foreign_key: false|
+|time|string|null: false, foreign_key: false|
 
 ### Association
 - belongs_to :group
