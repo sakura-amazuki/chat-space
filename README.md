@@ -27,7 +27,6 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false, foreign_key: false|
 |name|string|null: false, foreign_key: false|
 |mail|string|null: false, funique: false|
 |password|string|null: false, foreign_key: false|
