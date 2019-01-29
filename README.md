@@ -11,8 +11,8 @@
 ### Association
 - belongs_to :user_group
 
-## groupテーブル
 
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
@@ -20,8 +20,8 @@
 ### Association
 - belongs_to :user_group
 
-## user_groupテーブル
 
+## user_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key: true|
@@ -33,7 +33,6 @@
 
 
 ## chatテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key: true|
