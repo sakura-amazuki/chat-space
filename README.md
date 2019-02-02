@@ -9,16 +9,17 @@
 |password|string|null: false|
 
 ### Association
-- belongs_to :user_group
-
+- belongs_to :message
+- hasm_one: :group_users
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
-- belongs_to :user_group
+- belongs_to: :message
+- hasm_one :user_group
 
 
 ## user_groupテーブル
@@ -28,19 +29,20 @@
 |group_id|integer|foreign_key: true|
 
 ### Association
-- belongs_to :user
-- belongs_to :group
+- belongs_to :user_id
+- belongs_to :group_id
 
 
-## chatテーブル
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|foreign_key: true|
 |group_id|integer|foreign_key: true|
 |text|string|null: false|
+|image|string||
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :group_id
+- belongs_to :user_id
 
 
