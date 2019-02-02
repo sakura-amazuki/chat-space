@@ -9,9 +9,9 @@
 |password|string|null: false|
 
 ### Association
-- belongs_to :message
-- has_many: :group_users
-- has_many: :group
+- has_one :messages
+- has_many: :user_groups
+- has_many: :groups, through: :user_groups
 
 ## groupテーブル
 |Column|Type|Options|
@@ -19,9 +19,9 @@
 |name|string|null: false|
 
 ### Association
-- belongs_to: :message
-- has_many :user_group
-- has_many: :user
+- has_one: :message
+- has_many :user_groups
+- has_many: :users, through: :user_groups
 
 
 ## user_groupテーブル
@@ -31,8 +31,8 @@
 |group_id|integer|foreign_key: true|
 
 ### Association
-- belongs_to :user_id
-- belongs_to :group_id
+- belongs_to :user
+- belongs_to :group
 
 
 ## messageテーブル
@@ -44,7 +44,7 @@
 |image|string||
 
 ### Association
-- belongs_to :group_id
-- belongs_to :user_id
+- belongs_to :group
+- belongs_to :user
 
 
