@@ -10,7 +10,8 @@
 
 ### Association
 - belongs_to :message
-- hasm_one: :group_users
+- has_many: :group_users
+- has_many: :group
 
 ## groupテーブル
 |Column|Type|Options|
@@ -20,6 +21,7 @@
 ### Association
 - belongs_to: :message
 - hasm_one :user_group
+- has_many: :user
 
 
 ## user_groupテーブル
