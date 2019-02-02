@@ -20,7 +20,7 @@
 
 ### Association
 - belongs_to: :message
-- hasm_one :user_group
+- has_many :user_group
 - has_many: :user
 
 
