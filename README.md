@@ -27,8 +27,8 @@
 ## user_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|refference|foreign_key: true|
+|group_id|refference|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -38,8 +38,8 @@
 ## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|refference|foreign_key: true|
+|group_id|refference|foreign_key: true|
 |text|string||
 |image|string||
 
