@@ -9,36 +9,39 @@
 |password|string|null: false|
 
 ### Association
-- belongs_to :user_group
+- has_many :messages
+- has_many :user_groups
+- has_many :groups, through: :user_groups
 
 ## groupテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
-- belongs_to :user_group
+- has_many :messages
+- has_many :user_groups
+- has_many :users, through: :user_groups
+
 
 ## user_groupテーブル
-
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|refference|foreign_key: true|
+|group_id|refference|foreign_key: true|
 
 ### Association
 - belongs_to :user
 - belongs_to :group
 
 
-## chatテーブル
-
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
-|text|string|null: false|
+|user_id|refference|foreign_key: true|
+|group_id|refference|foreign_key: true|
+|text|string||
+|image|string||
 
 ### Association
 - belongs_to :group
