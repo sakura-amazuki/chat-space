@@ -1,3 +1,26 @@
-.block {
-   background-color: #010;
+.side_block {
+  width: 300px;
+  color: white;
+  float: left;
+
+}
+
+.user_block{
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  .user_name{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+  }
+}
+
+
+.icon{
+  list-style: none;
+  margin-left: 0.3rem;
 }
