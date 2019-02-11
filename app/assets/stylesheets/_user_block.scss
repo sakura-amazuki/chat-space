@@ -1,10 +1,3 @@
-.side_block {
-  width: 300px;
-  color: white;
-  float: left;
-
-}
-
 .user_block{
   background-color: #253141;
   height: 100px;
@@ -17,10 +10,12 @@
     width: 100%;
     font-weight: bold;
   }
+  .icon_block{
+    display: flex;
+    .icon{
+      list-style: none;
+      margin-left: 0.3rem;
+    }
+  }
 }
 
-
-.icon{
-  list-style: none;
-  margin-left: 0.3rem;
-}

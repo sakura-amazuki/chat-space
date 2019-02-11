@@ -1,0 +1,17 @@
+.side_block {
+  width: 300px;
+  color: white;
+  float: left;
+}
+
+.maim_block{
+  width: calc(100vw - 300px);
+  float: left;
+}
+
+.message_list{
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+}
