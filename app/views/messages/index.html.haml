@@ -7,30 +7,37 @@
         %i.fa.fa-edit
       %li.icon
         %i.fa.fa-cog
-  %div.gloup_bolck
+  %div.gloup_info_bolck
     %div.chat_gloup
-      %p.gloupname aaa
-      %p.message aaa
+      %p.gloup_name aaa
+      %p.chat_message aaa
     %div.chat_gloup
-      %p.gloupname bbbs
-      %p.message bbb
+      %p.gloup_name bbb
+      %p.chat_message bbb
 
-%div.main_block
+%div.chat_main_block
   %div.chat_header
     %div.left_box
       %h2.gloup_name aaa
       %ul.gloup_member
         Member：
         %li.member aaac
-    %div.edit_button edit
-  %div.messagelist
+    %div.edit_button Edit
+  %div.message_list_box
     %div.message
       %div.info
-        %p.user_name aaa
+        %p.send_usre_name aaa
         %p.date 2019/02/11(Mon) 17:01:26
-      %p.text hello,world
+      %p.text aaaaaaaaa
     %div.message
       %div.info
-        %p.user_name aaa
+        %p.send_usre_name aaa
         %p.date 2019/02/11(Mon) 17:01:26
       %p.text hello,world
+  %div.form
+    %form.send_message_block
+      %div.input_box
+        %input(placeholder="type a message" class="input_text" type="text" name="message[content]" id="message_content")
+        %lable.input_image
+          %i.fa.fa-image
+      %input(type="submit" name="commit" value="Send" class="send_button" data-disable-with="Send")
