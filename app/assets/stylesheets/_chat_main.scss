@@ -9,12 +9,14 @@
   padding: 20px 40px;
   background-color: #ddd;
   box-sizing: border-box;
-  .send_message_block{
+  &__send_message_block{
     display: flex;
-    .input_box{
+    box-sizing: border-box;
+    &__input_box{
       position: relative;
       width: 100%;
-      .input_text{
+      box-sizing: border-box;
+      &__input_text{
         box-sizing: border-box;
         height: 50px;
         width: 100%;
@@ -22,19 +24,21 @@
         color: #434a54;
         border-style: none;
       }
-      .input_image{
+      &__input_image{
         font-size: 1.3rem;
         position: absolute;
         top: 10px;
         right: 10px;
         cursor: pointer;
-        .image_file{
+        box-sizing: border-box;
+        &__image_file{
+          box-sizing: border-box;
           display: none;
         }
       }
     }
   }
-  .send_button{
+  &__send_button{
     width: 100px;
     height: 50px;
     padding: 0 30px;
@@ -56,36 +60,36 @@
   border-bottom: solid 1px #eee;
   overflow: scroll;
   box-sizing: border-box;
-  .left_box{
+  &__left_box{
     margin-top: 35px;
-    .gloup_name{
+    &__gloup_name{
       font-size: 20px;
       color: #333;
       margin-bottom: 15px;
     }
-    .gloup_member{
+    &__gloup_member{
       display: flex;
       font-size: 12px;
       color: #999999;
-      .member{
+      &__member{
         display: flex;
         display: list-item;
         text-align: -webkit-match-parent;
       }
     }
   }
-  .edit_button{
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    margin-top: 30px;
-    border: solid 1px #38aef0;
-    position: absolute;
-    right: 40px;
-    box-sizing: border-box;
-  }
 }
 
+.edit_button{
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: solid 1px #38aef0;
+  position: absolute;
+  right: 40px;
+  box-sizing: border-box;
+}
 
 
 
@@ -96,23 +100,23 @@
   background-color: #fafafa;
   overflow: scroll;
   box-sizing: border-box;
-  .message{
+  &__message{
     padding-bottom: 40px;
-    .info{
+    &__info{
       display: flex;
       margin-bottom: 10px;
-      .send_usre_name{
+      &__send_usre_name{
         color: #434a54;
         font-size: 16px;
         font-weight: bold;
       }
-      .date{
+      &__date{
         color: #999999;
         font-size: 12px;
         margin-left: 10px;
       }
     }
-    .text{
+    &__text{
       color: #434a54;
       font-size: 14px;
       margin-bottom: 10px;

@@ -1,43 +1,43 @@
 
-%div.side_block
-  %div.user_block
-    %p.user_name aaaaa
-    %ul.icon_block
-      %li.icon
+.side_block
+  .user_block
+    %p.user_block__user_name aaaaa
+    %ul.user_block__icon_block
+      %li.user_block__icon_block__icon
         %i.fa.fa-edit
-      %li.icon
+      %li.user_block__icon_block__icon
         %i.fa.fa-cog
-  %div.gloup_info_bolck
-    %div.chat_gloup
-      %p.gloup_name aaa
-      %p.chat_message aaa
-    %div.chat_gloup
-      %p.gloup_name bbb
-      %p.chat_message bbb
+  .gloup_info_bolck
+    .gloup_info_bolck__chat_gloup
+      %p.gloup_info_bolck__chat_gloup__gloup_name aaa
+      %p.gloup_info_bolck__chat_gloup__chat_message aaa
+    .gloup_info_bolck__chat_gloup
+      %p.gloup_info_bolck__chat_gloup__gloup_name bbb
+      %p.gloup_info_bolck__chat_gloup__chat_message bbb
 
-%div.chat_main_block
-  %div.chat_header
-    %div.left_box
-      %h2.gloup_name aaa
-      %ul.gloup_member
+.chat_main_block
+  .chat_header
+    .chat_header__left_box
+      %h2.chat_header__left_box__gloup_name aaa
+      %ul.chat_header__left_box__gloup_member
         Member：
-        %li.member aaac
-    %div.edit_button Edit
-  %div.message_list_box
-    %div.message
-      %div.info
-        %p.send_usre_name aaa
-        %p.date 2019/02/11(Mon) 17:01:26
-      %p.text aaaaaaaaa
-    %div.message
-      %div.info
-        %p.send_usre_name aaa
-        %p.date 2019/02/11(Mon) 17:01:26
-      %p.text hello,world
-  %div.form
-    %form.send_message_block
-      %div.input_box
-        %input(placeholder="type a message" class="input_text" type="text" name="message[content]" id="message_content")
-        %lable.input_image
+        %li.chat_header__left_box__gloup_member__member aaac
+    .edit_button Edit
+  .message_list_box
+    .message_list_box__message
+      .message_list_box__message__info
+        %p.message_list_box__message__info__send_usre_name aaa
+        %p.message_list_box__message__info__date 2019/02/11(Mon) 17:01:26
+      %p.message_list_box__message__text aaaaaaaaa
+    .message_list_box__message
+      .message_list_box__message__info
+        %p.message_list_box__message__info__send_usre_name aaa
+        %p.message_list_box__message__info__date 2019/02/11(Mon) 17:01:26
+      %p.message_list_box__message__text hello,world
+  .form
+    %form.form__send_message_block
+      .form__send_message_block__input_box
+        %input(placeholder="type a message" class="form__send_message_block__input_box__input_text" type="text" name="message[content]" id="message_content")
+        %lable.form__send_message_block__input_box__input_image
           %i.fa.fa-image
-      %input(type="submit" name="commit" value="Send" class="send_button" data-disable-with="Send")
+      %input(type="submit" name="commit" value="Send" class="form__send_button" data-disable-with="Send")
