@@ -1,0 +1,46 @@
+.side_block {
+  width: 300px;
+  color: white;
+  float: left;
+  box-sizing: border-box;
+}
+
+.user_block{
+  background-color: #253141;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  &__user_name{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+  }
+  &__icon_block{
+    display: flex;
+    &__icon{
+      list-style: none;
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.gloup_info_bolck{
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 0;
+  overflow: scroll;
+  box-sizing: border-box;
+  &__chat_gloup{
+    margin-bottom: 40px;
+    &__gloup_name{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+    &__chat_message{
+      font-size: 11px;
+    }
+  }
+}
