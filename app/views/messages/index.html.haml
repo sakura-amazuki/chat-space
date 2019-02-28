@@ -8,12 +8,10 @@
     .messages
       = render @messages
   .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__send_message_block' do
-          = fa_icon 'picture-o', class: 'icon'
-        = f.file_field :image, class: 'hidden'
-        = f.submit 'Send', class: 'form__send_button'
-
-
+    = form_for [@group, @message], html: {id: 'new_comment'} do |f|
+      = f.text_field :content, class: 'form__new_message', placeholder: 'type a message'
+      .form__message_box
+        = f.label :image, class: 'form__message_box__input_image' do
+          = fa_icon 'picture-o', class: 'form__message_box__input_image__icon'
+          = f.file_field :image, class: 'form__message_box__input_image__hidden'
+        = f.submit 'Send', class: 'form__message_box__send_button'
