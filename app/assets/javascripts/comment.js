@@ -1,13 +1,13 @@
 $(function(){
-  function buildHTML(comment){
+  function buildSendMessageHTML(message){
     var html = `<p>
                   <strong>
-                    <a href=/users/${comment.user_id}>${comment.user_name}</a>
+                    <a href=/users/${message.user_id}>${message.user_name}</a>
                     ：
                   </strong>
-                  ${comment.text}
-                  ${comment.image}
-                  ${comment.created_at}
+                  ${message.text}
+                  ${message.image}
+                  ${message.created_at}
                 </p>`
     return html;
   }
@@ -23,9 +23,9 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
-      $('.comments').append(html)
+    .done(function(receive_data){
+      var html = buildHTML(receive_data);
+      $('.messages').append(html)
       $('.textbox').val('')
     })
     .fail(function(){
