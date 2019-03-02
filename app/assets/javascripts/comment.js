@@ -6,6 +6,8 @@ $(function(){
                     ：
                   </strong>
                   ${comment.text}
+                  ${comment.image}
+                  ${comment.created_at}
                 </p>`
     return html;
   }
