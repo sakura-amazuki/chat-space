@@ -23,8 +23,8 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(receive_data){
-      var html = buildHTML(receive_data);
+    .done(function(message){
+      var html = buildHTML(message);
       $('.messages').append(html)
       $('.textbox').val('')
     })
