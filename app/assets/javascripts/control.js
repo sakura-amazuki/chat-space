@@ -6,7 +6,7 @@ $(function() {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='ユーザーのid'>
                   <p class='chat-group-user__name'>ユーザー名</p>
-                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' onclick="deleteRow(this)">削除</a>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' >削除</a>
                 </div>`
     search_list.append(html);
   }
@@ -16,7 +16,7 @@ $(function() {
     search_list.append(html);
   }
 
-  $("#data-user-id").on("click", function() {
+  $(".chat-group-user").on("click","#data-user-id", function() {
     var input = $(".chat-group-user.clearfix.js-chat-member").val();
     console.log(input)
     if(input === ""){
