@@ -17,7 +17,6 @@ $(function() {
 
   $(".chat-group-form__search").on("keyup", function() {
     var input = $("#user-search-result").val();
-    console.log(input)
     if(input === ""){
       $(".chat-group-form__search-result").empty();
       return;
@@ -31,13 +30,11 @@ $(function() {
     .done(function(users) {
       $(".chat-group-form__search-result").empty();
       if (users.length !== 0) {
-        //console.log("aaa")
         users.forEach(function(user){
           appendUser(user);
         });
       }
       else {
-        //console.log("bbb")
         appendErrMsgToHTML("一致するユーザーはいません");
       }
     })

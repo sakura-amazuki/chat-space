@@ -18,7 +18,6 @@ $(function() {
 
   $(".chat-group-user").on("click","#data-user-id", function() {
     var input = $(".chat-group-user.clearfix.js-chat-member").val();
-    console.log(input)
     if(input === ""){
       $(".chat-group-user.clearfix.js-chat-member").empty();
       return;
@@ -32,13 +31,11 @@ $(function() {
     .done(function(users) {
       $(".chat-group-user.clearfix.js-chat-member").empty();
       if (users.length !== 0) {
-        console.log("aaa")
         users.forEach(function(user){
           appendUser(user);
         });
       }
       else {
-        console.log("bbb")
         appendErrMsgToHTML("一致するユーザーはいません");
       }
     })
